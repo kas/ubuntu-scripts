@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# This script disables the Proton VPN permanent kill switch, disconnects, then displays the status
+
+protonvpn-cli ks --off
+protonvpn-cli d
+protonvpn-cli s

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# This script enables the Proton VPN permanent kill switch, connects to the fastest server, then displays the status
+
+protonvpn-cli ks --permanent
+protonvpn-cli c -f
+protonvpn-cli s
