@@ -56,14 +56,21 @@ log('Started')
 previous_dimensions = None
 
 while True:
-    popen = Popen('xdpyinfo', stdout=PIPE)
-    dimensions = check_output(
-        ['grep', 'dimensions'], stdin=popen.stdout)
-    popen.wait()
+    is_lockscreen_active = check_output(['qdbus', 'org.freedesktop.ScreenSaver', '/org/freedesktop/ScreenSaver', 'org.freedesktop.ScreenSaver.GetActive']).decode().strip()
 
-    if previous_dimensions != dimensions:
-        log('Updating scale')
-        update_scale()
-        previous_dimensions = dimensions
+    log(f'is_lockscreen_active: {is_lockscreen_active}')
+
+    if is_lockscreen_active != 'false':
+        pass
+    else:
+        popen = Popen('xdpyinfo', stdout=PIPE)
+        dimensions = check_output(
+            ['grep', 'dimensions'], stdin=popen.stdout)
+        popen.wait()
+
+        if previous_dimensions != dimensions:
+            log('Updating scale')
+            update_scale()
+            previous_dimensions = dimensions
 
     time.sleep(5)
