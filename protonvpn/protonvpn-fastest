@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# This script enables the Proton VPN permanent kill switch, connects to the fastest server, then displays the status
+# This script enables the Proton VPN NetShield ad-blocker and permanent kill switch, connects to the fastest server, then displays the status
 
+protonvpn-cli ns --ads-malware
 protonvpn-cli ks --permanent
 protonvpn-cli c -f
 protonvpn-cli s
