@@ -59,7 +59,7 @@ while True:
     is_lockscreen_active = check_output(['qdbus', 'org.freedesktop.ScreenSaver', '/org/freedesktop/ScreenSaver',
                                         'org.freedesktop.ScreenSaver.GetActive']).decode().strip() == 'true'
 
-    log('is_lockscreen_active: ' + is_lockscreen_active)
+    log('is_lockscreen_active: ' + str(is_lockscreen_active))
 
     if is_lockscreen_active:
         pass
