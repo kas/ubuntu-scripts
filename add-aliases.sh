@@ -12,6 +12,7 @@ echo '# kubuntu-scripts' >> ~/.bashrc
 echo 'alias pd="protonvpn-disconnect"' >> ~/.bashrc
 echo 'alias pf="protonvpn-fastest"' >> ~/.bashrc
 echo 'alias pr="protonvpn-russia"' >> ~/.bashrc
+echo 'alias ps="protonvpn-cli s"' >> ~/.bashrc
 echo 'alias t="time-theme"' >> ~/.bashrc
 echo 'alias td="time-theme --dark"' >> ~/.bashrc
 echo 'alias tl="time-theme --light"' >> ~/.bashrc
