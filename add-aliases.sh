@@ -3,7 +3,6 @@
 # This script adds aliases to the ~/.bashrc file
 
 bashrc=`cat -e ~/.bashrc`
-
 if [ ${bashrc: -1} != '$' ]; then
     echo '' >> ~/.bashrc
 fi
