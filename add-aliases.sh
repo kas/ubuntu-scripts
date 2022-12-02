@@ -9,9 +9,9 @@ fi
 echo '' >> ~/.bashrc
 
 echo '# kubuntu-scripts' >> ~/.bashrc
-echo 'alias pd="protonvpn-disconnect"' >> ~/.bashrc
-echo 'alias pf="protonvpn-fastest"' >> ~/.bashrc
-echo 'alias pr="protonvpn-russia"' >> ~/.bashrc
+echo 'alias pd="protonvpn-cli ns --off && protonvpn-cli ks --off && protonvpn-cli d && protonvpn-cli s"' >> ~/.bashrc
+echo 'alias pf="protonvpn-cli ns --ads-malware && protonvpn-cli ks --permanent && protonvpn-cli c -f && protonvpn-cli s"' >> ~/.bashrc
+echo 'alias pr="protonvpn-cli ns --ads-malware && protonvpn-cli ks --permanent && protonvpn-cli c --cc RU && protonvpn-cli s"' >> ~/.bashrc
 echo 'alias ps="protonvpn-cli s"' >> ~/.bashrc
 echo 'alias t="time-theme"' >> ~/.bashrc
 echo 'alias td="time-theme --dark"' >> ~/.bashrc

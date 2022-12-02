@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# This script enables the Proton VPN NetShield ad-blocker and permanent kill switch, connects to a Russian server, then displays the status
-
-protonvpn-cli ns --ads-malware
-protonvpn-cli ks --permanent
-protonvpn-cli c --cc RU
-protonvpn-cli s

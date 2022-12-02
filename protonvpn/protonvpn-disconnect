@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# This script disables the Proton VPN NetShield ad-blocker and permanent kill switch, disconnects, then displays the status
-
-protonvpn-cli ns --off
-protonvpn-cli ks --off
-protonvpn-cli d
-protonvpn-cli s
