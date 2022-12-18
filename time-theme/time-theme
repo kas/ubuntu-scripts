@@ -16,12 +16,6 @@ if len(sys.argv) > 2:
     log.log('Only pick one')
     sys.exit()
 
-filename = path.basename(__file__)
-if not path.isfile('/usr/local/bin/' + filename):
-    log.log(f"Symlink doesn't exist, create a symlink with this command: ln -s /home/ken/repos/kubuntu-scripts/time-theme/time-theme /usr/local/bin")
-else:
-    log.log('Symlink exists')
-
 pid = None
 try:
     pid = subprocess.check_output(
