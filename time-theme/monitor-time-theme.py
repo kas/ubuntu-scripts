@@ -12,8 +12,8 @@ from log import Log
 from sun import Sun
 
 COORDINATES = {'latitude': 41.66128, 'longitude': -91.5232}
-THEME_DARK = 'org.kde.breezedark.desktop'
-THEME_LIGHT = 'org.kde.breeze.desktop'
+THEME_DAY = 'org.kde.breeze.desktop'
+THEME_NIGHT = 'org.kde.breezedark.desktop'
 UTC_HOUR_OFFSET = -5
 
 
@@ -30,11 +30,11 @@ log = Log('monitor-time-theme-log')
 log.log('Started')
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-d', '--dark', action='store_true')
-parser.add_argument('-l', '--light', action='store_true')
+parser.add_argument('-d', '--day', action='store_true')
+parser.add_argument('-n', '--night', action='store_true')
 args = parser.parse_args()
 
-if args.dark and args.light:
+if args.day and args.night:
     log.log('Only pick one')
     sys.exit()
 
@@ -63,21 +63,21 @@ while True:
 
         theme = None
         if now_time > sunrise_time and now_time < sunset_time:
-            theme = THEME_LIGHT
+            theme = THEME_DAY
             next_time = sunset_time
             is_next_day = False
         else:
-            theme = THEME_DARK
+            theme = THEME_NIGHT
             next_time = sunrise_time
             is_next_day = now_time > next_time
 
-        if args.dark or args.light:
-            if args.dark:
-                theme = THEME_DARK
+        if args.day or args.night:
+            if args.day:
+                theme = THEME_DAY
             else:
-                theme = THEME_LIGHT
-            args.dark = False
-            args.light = False
+                theme = THEME_NIGHT
+            args.day = False
+            args.night = False
             log.log('Manually setting theme: {theme}')
 
         log.log(

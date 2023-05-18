@@ -14,5 +14,5 @@ echo 'alias pdk="protonvpn-cli ks --permanent && protonvpn-cli d && protonvpn-cl
 echo 'alias pf="protonvpn-cli ns --ads-malware && protonvpn-cli ks --permanent && protonvpn-cli c -f && protonvpn-cli s"' >> ~/.bashrc
 echo 'alias pst="protonvpn-cli s"' >> ~/.bashrc
 echo 'alias t="~/repos/kubuntu-scripts/time-theme/time-theme.py"' >> ~/.bashrc
-echo 'alias td="~/repos/kubuntu-scripts/time-theme/time-theme.py --dark"' >> ~/.bashrc
-echo 'alias tl="~/repos/kubuntu-scripts/time-theme/time-theme.py --light"' >> ~/.bashrc
+echo 'alias td="~/repos/kubuntu-scripts/time-theme/time-theme.py --day"' >> ~/.bashrc
+echo 'alias tn="~/repos/kubuntu-scripts/time-theme/time-theme.py --night"' >> ~/.bashrc
