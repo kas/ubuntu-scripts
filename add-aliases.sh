@@ -9,6 +9,9 @@ fi
 echo '' >> ~/.bashrc
 
 echo '# kubuntu-scripts' >> ~/.bashrc
+echo 'alias ab="sudo auto-cpufreq --force=reset"' >> ~/.bashrc
+echo 'alias ap="sudo auto-cpufreq --force=powersave"' >> ~/.bashrc
+echo 'alias as="auto-cpufreq --stats"' >> ~/.bashrc
 echo 'alias pd="protonvpn-cli ks --off && protonvpn-cli d && protonvpn-cli s"' >> ~/.bashrc
 echo 'alias pdk="protonvpn-cli ks --permanent && protonvpn-cli d && protonvpn-cli s"' >> ~/.bashrc
 echo 'alias pf="protonvpn-cli ns --ads-malware && protonvpn-cli ks --permanent && protonvpn-cli c -f && protonvpn-cli s"' >> ~/.bashrc
