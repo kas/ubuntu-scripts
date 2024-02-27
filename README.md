@@ -1,2 +1,3 @@
-# kubuntu-scripts
-Scripts that I use with Kubuntu
+# ubuntu-scripts
+
+Scripts that I use with Ubuntu
